@@ -1,0 +1,190 @@
+/* .home {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-image: url(/anime1.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home img {
+  height: 100%;
+  width: 100%;
+  filter: brightness(50%);
+  object-fit: cover;
+}
+.input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.inputwrapper {
+  width: 50%;
+  background-color: transparent;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input input {
+  width: 50%;
+  padding: 0px 10px;
+  background-color: transparent;
+  border: none;
+}
+.input input:focus {
+  border: none;
+}
+
+.home input {
+  position: relative;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+::placeholder {
+  color: black;
+  font-weight: 900;
+  font-size: large;
+  padding-left: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.names {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.names .nameswrapper {
+  width: 50%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+.animeName p {
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+.animeName p:hover {
+  background-color: aqua;
+  cursor: pointer;
+}
+.sicon {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  z-index: 10;
+} */
+
+.home {
+  height: 100vh;
+  width: 98.9vw;
+  background-image: url(/anime1.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.inputwrapper {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  height: 40px;
+  border-radius: 10px;
+  background-color: transparent;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* padding: 5px; */
+}
+.inputwrapper input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  margin-left: 10px;
+  font-weight: 900;
+  font-size: large;
+}
+input::placeholder {
+  color: black;
+}
+.sicon {
+  height: 30px;
+  font-size: large;
+  width: 30px;
+}
+.remove {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.names {
+  border: 1px solid;
+  width: 50vw;
+  /* padding: 5px; */
+  background-color: transparent;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.animeName {
+  padding: 10px 7px;
+  margin: 0;
+  /* width: 100%; */
+}
+.nameswrapper {
+  padding: 0;
+  margin: 0;
+}
+.animeName:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
+.nobg {
+  background-image: none;
+  height: 10vh;
+  width: 80%;
+  position: fixed;
+  top: 2%;
+  /* margin-top: 30px; */
+  display: flex;
+  justify-content: start;
+  align-items: none;
+  /* transition: all ease-in-out 2s; */
+  z-index: 100;
+}
+.chan {
+  animation-name: slidup;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidup {
+  from {
+    top: 50%;
+  }
+  to {
+    top: 0;
+  }
+}
