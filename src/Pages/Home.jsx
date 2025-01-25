@@ -11,21 +11,13 @@ const Home = () => {
   const [similarAnimes, setSimilarAnimes] = useState([]);
   const nav = useNavigate();
   let data = useLocation().state;
-  // var clas = "home";
   const [clas, setClas] = useState("home");
   const [chan, setChan] = useState(false);
   const location = useLocation();
   useEffect(() => {
     try {
-      if (data) {
-        // setQuery(data.Name);
-        const res = fetch(`http://localhost:5000/search?query=${query}`)
-          .then((data) => data.json())
-          .then((data) => {
-            console.log(data);
-            setNames(data.slice(0, 6));
-          });
-      } else {
+      if (query) {
+        console.log(query);
         const res = fetch(`http://localhost:5000/search?query=${query}`)
           .then((data) => data.json())
           .then((data) => {
@@ -44,12 +36,10 @@ const Home = () => {
   const selectedName = (name) => {
     setQuery(name.Name);
     setTyping(false);
-    // clas += "nobg chan";
     if (window.location.href === "http://localhost:5173") {
       setClas(" home nobg chan");
       console.log("came to chan");
     } else {
-      // clas = "home nobg";
       setClas("home nobg");
       console.log("added");
     }
@@ -60,7 +50,7 @@ const Home = () => {
   return (
     <div
       className={
-        window.location.href === "http://localhost:5173/" ? "home" : "home nobg"
+        window.location.href === "http://localhost:5173/" ? "home" : "home"
       }
     >
       <div className="input">
